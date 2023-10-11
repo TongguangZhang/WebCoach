@@ -1,7 +1,7 @@
-const express = require('express')
-const fs = require('fs')
-const mongoose = require('mongoose')
-const workout_routes = require('./routes/workouts')
+const express = require("express")
+const fs = require("fs")
+const mongoose = require("mongoose")
+const workout_routes = require("./routes/workouts")
 
 //app
 const app = express()
@@ -15,19 +15,18 @@ app.use((req, res, next) => {
 })
 
 //routes
-app.use('/api/workouts', workout_routes)
+app.use("/api/workouts", workout_routes)
 
+const configData = fs.readFileSync("config.json")
+const config = JSON.parse(configData)
 
-const configData = fs.readFileSync("config.json");
-const config = JSON.parse(configData);
-
-mongoose.connect(config.dbURI)
+mongoose
+    .connect(config.dbURI)
     .then(() => {
         app.listen(config.port, () => {
             console.log(`Listening on port ${config.port}`)
-        })        
+        })
     })
     .catch((error) => {
         console.log(error)
     })
-
