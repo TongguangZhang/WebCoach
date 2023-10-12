@@ -1,4 +1,5 @@
 const express = require("express")
+
 const Workout = require("../models/workout_model")
 const {
     get_workouts,
@@ -21,3 +22,4 @@ router.delete("/:id", delete_workout)
 router.patch("/:id", update_workout)
 
 module.exports = router
+

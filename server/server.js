@@ -1,6 +1,7 @@
-const express = require("express")
 const fs = require("fs")
 const mongoose = require("mongoose")
+const express = require("express")
+
 const workout_routes = require("./routes/workouts")
 
 //app
@@ -30,3 +31,4 @@ mongoose
     .catch((error) => {
         console.log(error)
     })
+

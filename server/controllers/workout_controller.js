@@ -1,5 +1,6 @@
-const Workout = require("../models/workout_model")
 const mongoose = require("mongoose")
+
+const Workout = require("../models/workout_model")
 
 const get_workouts = async (req, res) => {
     const workouts = await Workout.find({}).sort({ createdAt: -1 })
@@ -77,3 +78,4 @@ module.exports = {
     delete_workout,
     update_workout,
 }
+

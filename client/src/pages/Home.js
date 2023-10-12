@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 
 import { useWorkoutContext } from "../hooks/userWorkoutContext"
+
 import WorkoutDetails from "../components/WorkoutDetails"
 import WorkoutCreate from "../components/WorkoutCreate"
 
