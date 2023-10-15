@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT32&display=swap");
 
 :root {
-    --primary: #1aac83;
+    --primary: rgb(0, 213, 255);
     --error: #e7195a;
 }
 
@@ -25,7 +25,7 @@ header .container {
 }
 
 header a {
-    color: #333;
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -110,3 +110,4 @@ div.error {
 input.error {
     border: 1px solid var(--error);
 }
+
